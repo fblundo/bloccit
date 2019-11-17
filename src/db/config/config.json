@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "z1x2c3Z1X2C3",
+    "database": "bloccit_dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  },
+  "test": {
+    "username": "postgres",
+    "password": "z1x2c3Z1X2C3",
+    "database": "bloccit_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  },
+  "production": {
+    "username": "root",
+    "password": 1234,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  }
+}
