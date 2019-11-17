@@ -5,7 +5,6 @@ const base = "http://localhost:3000/topics/";
 const sequelize = require("../../src/db/models/index").sequelize;
 const Topic = require("../../src/db/models").Topic;
 
-
 describe("routes : topics", () => {
 
   beforeEach((done) => {
@@ -13,7 +12,7 @@ describe("routes : topics", () => {
       sequelize.sync({force: true}).then((res) => {
 
        Topic.create({
-         title: "JS Frameworks",
+         title: "Frameworks",
          description: "There is a lot of them"
        })
         .then((topic) => {
@@ -24,9 +23,7 @@ describe("routes : topics", () => {
           console.log(err);
           done();
         });
-
       });
-
     });
 
   describe("GET /topics", () => {
@@ -36,9 +33,9 @@ describe("routes : topics", () => {
          expect(res.statusCode).toBe(200);
          expect(err).toBeNull();
          expect(body).toContain("Topics");
-         expect(body).toContain("JS Frameworks");
+         expect(body).toContain("Frameworks");
          done();
        });
      });
    });
-  })
+ });
